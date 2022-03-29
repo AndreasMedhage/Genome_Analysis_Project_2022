@@ -14,5 +14,4 @@ canu \
  genomeSize=2.41m \
  -maxThreads=2 \
  useGrid=false \
- stopOnReadQuality=false \
  -pacbio /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data/raw_data/DNA_raw_data/*
