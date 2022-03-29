@@ -1,10 +1,12 @@
 #!/bin/bash -l
-#SBATCH -A uppmax2022-2-5_1
+#SBATCH -A uppmax2022-2-5
 #SBATCH -M snowy
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 15:00:00
 #SBATCH -J Genome_analysis_2022_paper2_genome_assembly
+# --mail-type = ALL
+# --mail-user andreas.medhage.8947@student.uu.se
 
 module load bioinfo-tools
 module load canu
