@@ -6,14 +6,12 @@
 #SBATCH -t 15:00:00
 #SBATCH -J Genome_analysis_2022_paper2_genome_assembly
 # --mail-type = ALL
-# --mail-user andreas.medhage.8947@student.uu.se
+# --mail-user Andreas.Medhage.8947@student.uu.se
 
 module load bioinfo-tools
-module load canu
+module load canu/2.0
 
-canu \
- -p L.Ferriphilum -d /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/assembly \
- genomeSize=2.41m \
- useGrid=false \
- -maxThreads=2 \
+canu -p L.Ferriphilum \
+ -d /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/assembly/canu \
+ genomeSize=2.4m useGrid=false -maxThreads=4 \
  -pacbio-raw /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data/raw_data/DNA_raw_data/*
