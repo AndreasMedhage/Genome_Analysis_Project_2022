@@ -6,7 +6,7 @@
 #SBATCH -n 1
 #SBATCH -t 20:00
 #SBATCH -J Genome_analysis_2022_paper2_quality_assembly
-#SBATCH --mail-type = ALL
+#SBATCH --mail-type=ALL
 #SBATCH --mail-user Andreas.Medhage.8947@student.uu.se
 #SBATCH -o /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/code/logs
 #SBATCH -e /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/code/logs
