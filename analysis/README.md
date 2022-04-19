@@ -6,3 +6,5 @@ Directory for storing output files from analysis in the project
 assembly - results pretaining to the assembly
 
 annotation - results pretaining to the annotation
+
+preprocessRNA - results trimming as well as quality controll before and after trimming
