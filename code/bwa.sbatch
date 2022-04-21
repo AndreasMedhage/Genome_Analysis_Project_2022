@@ -2,8 +2,8 @@
 #SBATCH -A uppmax2022-2-5
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH --reservation=uppmax2022-2-5_6
 #SBATCH -n 8
+#SBATCH --reservation=uppmax2022-2-5_5
 #SBATCH -t 10:00:00
 #SBATCH -J Genome_analysis_2022_paper2_bwa
 #SBATCH --mail-type=ALL
@@ -15,13 +15,11 @@ echo QOS = $SLURM_JOB_QOS
 module load bioinfo-tools bwa samtools
 
 ref="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/assembly/canu/L.Ferriphilum.contigs.fasta"
-in="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data/trimmed_data/"
+in="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data/trimmed_data"
 out="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/transcript_mapping"
 
-cd $in
-
 bwa index ${ref}
-for x in ${in}/*_paired_1.fastq; do
- xn=$(basename -s _1.fastq $x)
- bwa mem ${ref} ${xn}_1.fastq ${xn}_2.fastq | samtools sort -o ${out}/${xn}.bam
+for x in ${in}/*_p_1.fastq.gz; do
+ xn=$(basename -s _1.fastq.gz $x)
+ bwa mem -t 8 ${ref} ${in}/${xn}_1.fastq.gz ${in}/${xn}_2.fastq.gz | samtools sort -@8 -o ${out}/${xn}.bam
 done
