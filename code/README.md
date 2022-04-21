@@ -9,9 +9,11 @@ annotation.sbatch - sbatch script for annotating genome using prokka
 
 synteny.sbatch - sbatch script homology study using blastn
 
+TruSeq3-PE.fa - adapter file for trimming
 trimm_RNA.sbatch - sbatch script for preprocessing of Illumina short RNA reads using Trimmomatic
 check_RNA.sbatch - sbatch script for quality assesment of short RNA reads and trimmed read using FastQC
 
+bwa.sbatch - script for mapping
+htseq.sbatch - script counting mapped reads
 
 logs - loggs from slurm
-

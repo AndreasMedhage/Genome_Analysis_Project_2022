@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2022-2-5
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH --reservation=uppmax2022-2-5_4
+#SBATCH --reservation=uppmax2022-2-5_6
 #SBATCH -n 8
 #SBATCH -t 10:00:00
 #SBATCH -J Genome_analysis_2022_paper2_bwa
@@ -23,5 +23,5 @@ cd $in
 bwa index ${ref}
 for x in ${in}/*_paired_1.fastq; do
  xn=$(basename -s _1.fastq $x)
- bwa mem ${ref} ${xn}_1.fastq ${xn}_2.fastq | samtools ${out}/mapping.bam
+ bwa mem ${ref} ${xn}_1.fastq ${xn}_2.fastq | samtools sort -o ${out}/${xn}.bam
 done
