@@ -12,3 +12,5 @@ preprocessRNA - results trimming as well as quality controll before and after tr
 synteny- results from synteny study
 
 transcript_mapping - results transcript mapping
+
+transcript_expression - results transcipt readcounts and expression level study
