@@ -16,7 +16,7 @@ module load bioinfo-tools trimmomatic
 
 indict="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data/raw_data/RNA_raw_data"
 outdict="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/preprocessRNA"
-trimmdict="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data/trimmed_data"
+trimmdict="/proj/genomeanalysis2022/nobackup/work/amedhage/trimmed_data/"
 
 for x in $indict/*_1.fastq.gz; do
  xn=$(basename -s _1.fastq.gz $x)
@@ -30,4 +30,6 @@ for x in $indict/*_1.fastq.gz; do
  ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 \
  SLIDINGWINDOW:4:15
 done
+
+ln -s /proj/genomeanalysis2022/nobackup/work/amedhage/trimmed_data/ /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data
 
