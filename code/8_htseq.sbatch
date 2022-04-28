@@ -24,3 +24,5 @@ for x in $map/*.bam; do
  samtools index $x
  htseq-count -f bam -r pos -i gene_name -s no -t cds $x $gff -o $out/$xn
 done
+
+ln -s /proj/genomeanalysis2022/nobackup/work/amedhage/htseq /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/transcript_mapping/htseq
