@@ -19,6 +19,10 @@ Directory for storing scripts used in the project
 
 8_htseq.sbatch - script counting mapped reads
 
+9_DESEQ2.sbatch - script for running DESEQ2.R
+
+DESEQ2.R - r script for running DESEQ2
+
 TruSeq3-PE.fa - adapter file for trimming
 
 logs - loggs from slurm
