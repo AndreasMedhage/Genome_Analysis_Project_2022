@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2022-2-5
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH --reservation=uppmax2022-2-5_4
+#SBATCH --reservation=uppmax2022-2-5_10
 #SBATCH -n 8
 #SBATCH -t 10:00:00
 #SBATCH -J Genome_analysis_2022_paper2_synteny
@@ -18,4 +18,4 @@ in="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/assembly
 out="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/synteny/blastn.out"
 ref="/home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/data/raw_data/reference/OBMB01.fasta"
 
-blastn -query $in -subject $ref -out $out
+blastn -query $in -subject $ref -out $out -outfmt 6

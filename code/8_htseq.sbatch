@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2022-2-5
 #SBATCH -M snowy
 #SBATCH -p node
-#SBATCH --reservation=uppmax2022-2-5_6
+#SBATCH --reservation=uppmax2022-2-5_7
 #SBATCH -n 4
 #SBATCH -t 16:00:00
 #SBATCH -J Genome_analysis_2022_paper2_htseq
@@ -22,7 +22,7 @@ module load bioinfo-tools htseq samtools
 for x in $map/*.bam; do
  xn=$(basename -s .bam $x)
  samtools index $x
- htseq-count -f bam -r pos -i gene_name -s no -t cds $x $gff -o $out/$xn
+ htseq-count -f bam -r pos -i ID -s no -t CDS $x $gff > $out/$xn
 done
 
-ln -s /proj/genomeanalysis2022/nobackup/work/amedhage/htseq /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/transcript_mapping/
+#ln -s /proj/genomeanalysis2022/nobackup/work/amedhage/htseq /home/amedhage/GenomeAnalysis/Genome_Analysis_Project_2022/analysis/transcript_mapping/
