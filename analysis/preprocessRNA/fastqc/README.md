@@ -18,13 +18,6 @@ Directory for storing quality of RNA reads from Fastqc, before and after trimmin
 > ERR2036629_u_2_fastqc.html - FastQCreport trimmed (unpaired) reads reverse
 
 30 - storing Fastqc files about sample ERR2036630
- ERR2036630_1_fastqc.html - FastQCreport untrimmed forward reads
- ERR2036630_2_fastqc.html - FastQCreport untrimmed reverse reads
- ERR2036630_p_1_fastqc.html - FastQCreport trimmed (paired) reads forward
- ERR2036630_p_2_fastqc.html - FastQCreport trimmed (paired) reads reverse
- ERR2036630_u_1_fastqc.html - FastQCreport trimmed (unpaired) reads forward
- ERR2036630_u_2_fastqc.html - FastQCreport trimmed (unpaired) reads reverse
-
 
 31 - storing Fastqc files about sample ERR2036631
 
